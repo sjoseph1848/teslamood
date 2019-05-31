@@ -102,8 +102,15 @@ class ViewController: UIViewController {
             print(title)
             for dic in jsonArray{
                 guard let title = dic["price"] as? Double else { return }
-                self.priceLabel.text = "\(title)"
-                print(title) //Output
+                DispatchQueue.main.async { // Correct
+                    self.priceLabel.text = "\(title)"
+                    if title < 190 {
+                        self.setGreyGradientBackground()
+                    }else {
+                        self.setBlueGradientBackground()
+                    }
+                }
+                
                 
             }
             
