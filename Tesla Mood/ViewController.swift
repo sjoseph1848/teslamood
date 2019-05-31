@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import NVActivityIndicatorView
 
 
 
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     let gradientLayer = CAGradientLayer()
     let url = URL(string: "https://financialmodelingprep.com/api/company/rating/AAPL?datatype=json")
-//    var activityIndicator : NVActivityIndicatorView!
+    var activityIndicator : NVActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -34,9 +34,9 @@ class ViewController: UIViewController {
         
         let indicatorSize:CGFloat = 70
         let indicatorFrame = CGRect(x:(view.frame.width-indicatorSize)/2,y:(view.frame.height-indicatorSize)/2,width: indicatorSize,height:indicatorSize)
-//        activityIndicator = NVActivityIndicatorView(frame:indicatorFrame,type:.lineScale,color:UIColor.white,padding:20.0)
-//        activityIndicator.backgroundColor = UIColor.black
-//        view.addSubview(activityIndicator)
+        activityIndicator = NVActivityIndicatorView(frame:indicatorFrame,type:.lineScale,color:UIColor.white,padding:20.0)
+        activityIndicator.backgroundColor = UIColor.black
+        view.addSubview(activityIndicator)
       
         
     }
@@ -68,6 +68,9 @@ class ViewController: UIViewController {
         gradientLayer.colors = [topColor,bottomoColor]
     }
     
+    
+    
+    
     func callStock(){
         let url = URL(string: "https://financialmodelingprep.com/api/company/real-time-price/AAPL,TSLA?datatype=json")
         
@@ -95,10 +98,11 @@ class ViewController: UIViewController {
             }
             print(jsonArray)
             //Now get title value
-            guard let title = jsonArray[1]["symbol"] as? String else { return }
+            guard let title = jsonArray[1]["price"] as? Double else { return }
             print(title)
             for dic in jsonArray{
-                guard let title = dic["symbol"] as? String else { return }
+                guard let title = dic["price"] as? Double else { return }
+                self.priceLabel.text = "\(title)"
                 print(title) //Output
                 
             }
