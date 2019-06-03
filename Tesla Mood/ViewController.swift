@@ -43,16 +43,12 @@ class ViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-         setBlueGradientBackground()
+            
             callStock()
-        print("Hey")
+      
         
     }
     
-    
-    
-    
-
     func setBlueGradientBackground(){
         let topColor = UIColor(red:95.0/255.0,green:165.0/255.0,blue:1.0,alpha:1.0).cgColor
         let bottomoColor = UIColor(red:72.0/255.0,green:114.0/255.0,blue:184.0/255.0,alpha:1.0).cgColor
@@ -68,14 +64,63 @@ class ViewController: UIViewController {
         gradientLayer.colors = [topColor,bottomoColor]
     }
     
+    func setGreenGradientBackground(){
+        gradientLayer.colors = [UIColor.green.cgColor, UIColor.yellow.cgColor]
+        gradientLayer.frame = view.bounds
+    }
+    
+    func setGreenGreenGradientBackground(){
+        gradientLayer.colors = [UIColor.darkGray.cgColor, UIColor.green.cgColor]
+        gradientLayer.frame = view.bounds
+    }
+    
+    func setRedGradientBackground(){
+        gradientLayer.colors = [UIColor.red.cgColor,UIColor.darkGray.cgColor]
+        gradientLayer.frame = view.bounds
+    }
+    
+    func setRedRedGradientBackground(){
+        gradientLayer.colors = [UIColor.red.cgColor,UIColor.red.cgColor]
+        gradientLayer.frame = view.bounds
+    }
+    
+    func setNeturalGradientBackground(){
+        gradientLayer.colors = [UIColor.yellow.cgColor,UIColor.black.cgColor]
+        gradientLayer.frame = view.bounds
+    }
+    
+    func setLowestPrice(){
+        
+    }
+    
+    func setSecondLowestPrice(){
+        
+    }
+    
+    func setThirdLowestPrice(){
+        
+    }
+    
+    func setNeutralPrice(){
+    
+    }
+    
+    func setHigherPrice(){
+        
+    }
+    
+    func setHighestPrice(){
+        
+    }
+    
+    
+    
     
     
     
     func callStock(){
         let url = URL(string: "https://financialmodelingprep.com/api/company/real-time-price/AAPL,TSLA?datatype=json")
-        
         var request = URLRequest(url: url!)
-        
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
             guard error == nil else {
@@ -86,13 +131,7 @@ class ViewController: UIViewController {
                 print("Data is empty")
                 return
             }
-            
-            
-            
             let json = try! JSONSerialization.jsonObject(with: data, options: [])
-            
-            
-            
             guard let jsonArray = json as? [[String: Any]] else {
                 return
             }
@@ -104,11 +143,20 @@ class ViewController: UIViewController {
                 guard let title = dic["price"] as? Double else { return }
                 DispatchQueue.main.async { // Correct
                     self.priceLabel.text = "\(title)"
-                    if title < 190 {
-                        self.setGreyGradientBackground()
-                    }else {
+                    if title < 185 {
+                        
+                        self.setRedGradientBackground()
+                    }else if title < 190 {
+                        
+                        self.setGreenGreenGradientBackground()
+                    } else if title < 195 {
+                        
                         self.setBlueGradientBackground()
+                    } else if title < 250 {
+                        
+                        self.setGreenGreenGradientBackground()
                     }
+                    
                 }
                 
                 
