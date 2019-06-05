@@ -80,37 +80,35 @@ class ViewController: UIViewController {
     }
     
     func setRedRedGradientBackground(){
-        gradientLayer.colors = [UIColor.red.cgColor,UIColor.red.cgColor]
+        gradientLayer.colors = [UIColor.red.cgColor,UIColor.black.cgColor]
         gradientLayer.frame = view.bounds
     }
     
     func setNeturalGradientBackground(){
-        gradientLayer.colors = [UIColor.yellow.cgColor,UIColor.black.cgColor]
+        gradientLayer.colors = [UIColor.darkGray.cgColor,UIColor.black.cgColor]
         gradientLayer.frame = view.bounds
     }
     
     func setLowestPrice(){
+        self.setRedRedGradientBackground()
         
     }
     
     func setSecondLowestPrice(){
-        
+        self.setRedGradientBackground()
     }
     
-    func setThirdLowestPrice(){
-        
-    }
     
     func setNeutralPrice(){
-    
+        self.setNeturalGradientBackground()
     }
     
     func setHigherPrice(){
-        
+        self.setGreenGradientBackground()
     }
     
     func setHighestPrice(){
-        
+        self.setGreenGreenGradientBackground()
     }
     
     
