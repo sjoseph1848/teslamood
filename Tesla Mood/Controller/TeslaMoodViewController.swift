@@ -101,6 +101,8 @@ class ViewController: UIViewController {
     
     func setNeutralPrice(){
         self.setNeturalGradientBackground()
+        self.conditionImageView.image = UIImage(named: "sadbroker")
+        self.conditionLabel.text = "Better than this guy on Black Tuesday"
     }
     
     func setHigherPrice(){
@@ -141,15 +143,15 @@ class ViewController: UIViewController {
                 guard let title = dic["price"] as? Double else { return }
                 DispatchQueue.main.async { // Correct
                     self.priceLabel.text = "\(title)"
+                    
+                    
+                    
                     if title < 185 {
                         
                         self.setRedGradientBackground()
-                    }else if title < 190 {
+                    }else if title < 195 {
                         
-                        self.setGreenGreenGradientBackground()
-                    } else if title < 195 {
-                        
-                        self.setBlueGradientBackground()
+                         self.setNeutralPrice()
                     } else if title < 250 {
                         
                         self.setGreenGreenGradientBackground()
