@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     let gradientLayer = CAGradientLayer()
     let url = URL(string: "https://financialmodelingprep.com/api/company/rating/AAPL?datatype=json")
     var activityIndicator : NVActivityIndicatorView!
-    let base = "https://financialmodelingprep.com/api/company/real-time-price/AAPL,TSLA?datatype=json"
+    let base = "https://financialmodelingprep.com/api/v3/historical-price-full/TSLA?from=2019-01-01"
     
     
     override func viewDidLoad() {
