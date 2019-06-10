@@ -8,7 +8,8 @@
 
 import UIKit
 import NVActivityIndicatorView
-
+import Alamofire
+import SwiftyJSON
 
 
 class ViewController: UIViewController {
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
     let gradientLayer = CAGradientLayer()
     let url = URL(string: "https://financialmodelingprep.com/api/company/rating/AAPL?datatype=json")
     var activityIndicator : NVActivityIndicatorView!
+    let base = "https://financialmodelingprep.com/api/company/real-time-price/AAPL,TSLA?datatype=json"
     
     
     override func viewDidLoad() {
@@ -45,7 +47,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
             
             callStock()
-      
+            getTeslaData(url: base)
         
     }
     
@@ -112,6 +114,36 @@ class ViewController: UIViewController {
     func setHighestPrice(){
         self.setGreenGreenGradientBackground()
     }
+    
+    
+    func getTeslaData(url:String){
+        
+        Alamofire.request(url,method: .get).responseJSON{
+            response in
+            if response.result.isSuccess {
+                print("Success! Got the tesla data")
+                
+                let teslaJSON : JSON = JSON(response.result.value!)
+                print(teslaJSON)
+                //self.updateWeatherData(json: weatherJSON)
+                
+            }
+            else{
+                print("Error \(response.result.error)")
+                //self.cityLabel.text = "Connection Issues"
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
