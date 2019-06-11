@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     let url = URL(string: "https://financialmodelingprep.com/api/company/rating/AAPL?datatype=json")
     var activityIndicator : NVActivityIndicatorView!
     let base = "https://financialmodelingprep.com/api/v3/historical-price-full/TSLA?from=2019-01-01"
-    
+    let stockDataModel = StockDataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -124,15 +124,29 @@ class ViewController: UIViewController {
                 print("Success! Got the tesla data")
                 
                 let teslaJSON : JSON = JSON(response.result.value!)
-                print(teslaJSON)
-                //self.updateWeatherData(json: weatherJSON)
+               
+                self.updateTeslaData(json:teslaJSON)
                 
             }
             else{
-                print("Error \(response.result.error)")
+//                print("Error \(response.result.error)")
                 //self.cityLabel.text = "Connection Issues"
             }
         }
+    }
+    
+    
+    func updateTeslaData(json:JSON){
+        if let priceResult = json["historical"][0]["close"].double {
+            stockDataModel.yearOpenPrice = Int(priceResult)
+            var curr = stockDataModel.yearOpenPrice - stockDataModel.currentPrice
+           print("Check 2123 \(curr)")
+            
+            print(stockDataModel.currentPrice)
+            
+        }
+        
+
     }
     
     
@@ -170,6 +184,7 @@ class ViewController: UIViewController {
             print(jsonArray)
             //Now get title value
             guard let title = jsonArray[1]["price"] as? Double else { return }
+            self.stockDataModel.currentPrice = Int(title)
             print(title)
             for dic in jsonArray{
                 guard let title = dic["price"] as? Double else { return }
