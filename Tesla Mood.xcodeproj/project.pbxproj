@@ -14,7 +14,9 @@
 		61584FCF229E1EF100CDCE6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61584FCD229E1EF100CDCE6C /* LaunchScreen.storyboard */; };
 		61584FD722A00E3100CDCE6C /* StockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61584FD622A00E3100CDCE6C /* StockDataModel.swift */; };
 		61AFD24222AE669D0091983C /* TeslaOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFD24122AE669D0091983C /* TeslaOpenViewController.swift */; };
-		61AFD24422AF49860091983C /* NewsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFD24322AF49860091983C /* NewsDataModel.swift */; };
+		61AFD24422AF49860091983C /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFD24322AF49860091983C /* NewsItem.swift */; };
+		61FE7C2122B5614300AC1229 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FE7C2022B5614300AC1229 /* DataSet.swift */; };
+		61FE7C2522B5649700AC1229 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FE7C2422B5649700AC1229 /* CategoryCell.swift */; };
 		C8F62E634CE126FA0456F0BB /* Pods_Tesla_Mood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C602D51859F499A7CB7FC80 /* Pods_Tesla_Mood.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +30,9 @@
 		61584FD0229E1EF100CDCE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61584FD622A00E3100CDCE6C /* StockDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDataModel.swift; sourceTree = "<group>"; };
 		61AFD24122AE669D0091983C /* TeslaOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeslaOpenViewController.swift; path = "Tesla Mood/Controller/TeslaOpenViewController.swift"; sourceTree = SOURCE_ROOT; };
-		61AFD24322AF49860091983C /* NewsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataModel.swift; sourceTree = "<group>"; };
+		61AFD24322AF49860091983C /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		61FE7C2022B5614300AC1229 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
+		61FE7C2422B5649700AC1229 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		9C602D51859F499A7CB7FC80 /* Pods_Tesla_Mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tesla_Mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F579196CF6BB1F6A371E35 /* Pods-Tesla Mood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesla Mood.release.xcconfig"; path = "Target Support Files/Pods-Tesla Mood/Pods-Tesla Mood.release.xcconfig"; sourceTree = "<group>"; };
 		D406ABFC35AB6E923CBCDB51 /* Pods-Tesla Mood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesla Mood.debug.xcconfig"; path = "Target Support Files/Pods-Tesla Mood/Pods-Tesla Mood.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,9 +79,9 @@
 		61584FC3229E1EF000CDCE6C /* Tesla Mood */ = {
 			isa = PBXGroup;
 			children = (
-				61AFD24022ADEE560091983C /* Controller */,
 				61AFD23F22ADEE4B0091983C /* Model */,
 				61AFD23E22ADEE120091983C /* View */,
+				61AFD24022ADEE560091983C /* Controller */,
 				61584FCB229E1EF100CDCE6C /* Assets.xcassets */,
 				61584FCD229E1EF100CDCE6C /* LaunchScreen.storyboard */,
 				61584FD0229E1EF100CDCE6C /* Info.plist */,
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				61584FC8229E1EF000CDCE6C /* Main.storyboard */,
+				61FE7C2422B5649700AC1229 /* CategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,7 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				61584FD622A00E3100CDCE6C /* StockDataModel.swift */,
-				61AFD24322AF49860091983C /* NewsDataModel.swift */,
+				61AFD24322AF49860091983C /* NewsItem.swift */,
+				61FE7C2022B5614300AC1229 /* DataSet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61AFD24422AF49860091983C /* NewsDataModel.swift in Sources */,
+				61FE7C2122B5614300AC1229 /* DataSet.swift in Sources */,
+				61AFD24422AF49860091983C /* NewsItem.swift in Sources */,
 				61584FC7229E1EF000CDCE6C /* TeslaMoodViewController.swift in Sources */,
+				61FE7C2522B5649700AC1229 /* CategoryCell.swift in Sources */,
 				61584FC5229E1EF000CDCE6C /* AppDelegate.swift in Sources */,
 				61AFD24222AE669D0091983C /* TeslaOpenViewController.swift in Sources */,
 				61584FD722A00E3100CDCE6C /* StockDataModel.swift in Sources */,

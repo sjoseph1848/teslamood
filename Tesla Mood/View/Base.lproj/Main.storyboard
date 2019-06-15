@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-sB-XOO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="H8c-sB-XOO">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="Kbf-rv-nBu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="200" id="Kbf-rv-nBu" customClass="CategoryCell" customModule="Tesla_Mood" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kbf-rv-nBu" id="iOj-mR-Hax">
@@ -49,17 +49,18 @@
                                                 <constraint firstItem="8do-k3-Qyf" firstAttribute="leading" secondItem="iOj-mR-Hax" secondAttribute="leading" constant="20" id="yGU-vy-2Go"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImg" destination="Lpb-zR-ReW" id="J0p-ab-BcP"/>
+                                            <outlet property="categoryTitle" destination="8do-k3-Qyf" id="c54-hV-Jbe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euP-3R-tE0">
-                                <rect key="frame" x="0.0" y="433" width="414" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                         <constraints>
+                            <constraint firstItem="H8c-sB-XOO" firstAttribute="leading" secondItem="dyG-g1-VdT" secondAttribute="leading" id="8qx-w9-NyB"/>
+                            <constraint firstAttribute="trailing" secondItem="H8c-sB-XOO" secondAttribute="trailing" id="TdA-un-AY4"/>
                             <constraint firstItem="sXY-Tg-Ktd" firstAttribute="bottom" secondItem="H8c-sB-XOO" secondAttribute="bottom" id="psR-wB-32b"/>
                             <constraint firstItem="H8c-sB-XOO" firstAttribute="top" secondItem="sXY-Tg-Ktd" secondAttribute="top" id="rxB-3S-Gnm"/>
                         </constraints>
@@ -67,6 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="OBT-h0-W34"/>
                     <connections>
+                        <outlet property="tableView" destination="H8c-sB-XOO" id="CQG-rJ-efZ"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSecondScreen" id="Wvg-Bh-LPU"/>
                     </connections>
                 </viewController>
