@@ -8,31 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		61584FC5229E1EF000CDCE6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61584FC4229E1EF000CDCE6C /* AppDelegate.swift */; };
-		61584FC7229E1EF000CDCE6C /* TeslaMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61584FC6229E1EF000CDCE6C /* TeslaMoodViewController.swift */; };
 		61584FCA229E1EF000CDCE6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61584FC8229E1EF000CDCE6C /* Main.storyboard */; };
 		61584FCC229E1EF100CDCE6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61584FCB229E1EF100CDCE6C /* Assets.xcassets */; };
 		61584FCF229E1EF100CDCE6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61584FCD229E1EF100CDCE6C /* LaunchScreen.storyboard */; };
-		61584FD722A00E3100CDCE6C /* StockDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61584FD622A00E3100CDCE6C /* StockDataModel.swift */; };
-		61AFD24222AE669D0091983C /* TeslaOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFD24122AE669D0091983C /* TeslaOpenViewController.swift */; };
-		61AFD24422AF49860091983C /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AFD24322AF49860091983C /* NewsItem.swift */; };
-		61FE7C2122B5614300AC1229 /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FE7C2022B5614300AC1229 /* DataSet.swift */; };
-		61FE7C2522B5649700AC1229 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FE7C2422B5649700AC1229 /* CategoryCell.swift */; };
+		61D2D36F22BFF68800313529 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D2D36E22BFF68800313529 /* ViewController.swift */; };
+		61D2D37122BFF6CB00313529 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D2D37022BFF6CB00313529 /* BaseTabBarController.swift */; };
 		C8F62E634CE126FA0456F0BB /* Pods_Tesla_Mood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C602D51859F499A7CB7FC80 /* Pods_Tesla_Mood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61584FC1229E1EF000CDCE6C /* Tesla Mood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesla Mood.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61584FC4229E1EF000CDCE6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61584FC6229E1EF000CDCE6C /* TeslaMoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaMoodViewController.swift; sourceTree = "<group>"; };
 		61584FC9229E1EF000CDCE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61584FCB229E1EF100CDCE6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61584FCE229E1EF100CDCE6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61584FD0229E1EF100CDCE6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61584FD622A00E3100CDCE6C /* StockDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDataModel.swift; sourceTree = "<group>"; };
-		61AFD24122AE669D0091983C /* TeslaOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeslaOpenViewController.swift; path = "Tesla Mood/Controller/TeslaOpenViewController.swift"; sourceTree = SOURCE_ROOT; };
-		61AFD24322AF49860091983C /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		61FE7C2022B5614300AC1229 /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
-		61FE7C2422B5649700AC1229 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		61D2D36E22BFF68800313529 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		61D2D37022BFF6CB00313529 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		9C602D51859F499A7CB7FC80 /* Pods_Tesla_Mood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tesla_Mood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F579196CF6BB1F6A371E35 /* Pods-Tesla Mood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesla Mood.release.xcconfig"; path = "Target Support Files/Pods-Tesla Mood/Pods-Tesla Mood.release.xcconfig"; sourceTree = "<group>"; };
 		D406ABFC35AB6E923CBCDB51 /* Pods-Tesla Mood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tesla Mood.debug.xcconfig"; path = "Target Support Files/Pods-Tesla Mood/Pods-Tesla Mood.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,8 +75,11 @@
 				61AFD23E22ADEE120091983C /* View */,
 				61AFD24022ADEE560091983C /* Controller */,
 				61584FCB229E1EF100CDCE6C /* Assets.xcassets */,
+				61584FC4229E1EF000CDCE6C /* AppDelegate.swift */,
+				61584FC8229E1EF000CDCE6C /* Main.storyboard */,
 				61584FCD229E1EF100CDCE6C /* LaunchScreen.storyboard */,
 				61584FD0229E1EF100CDCE6C /* Info.plist */,
+				61D2D36E22BFF68800313529 /* ViewController.swift */,
 			);
 			path = "Tesla Mood";
 			sourceTree = "<group>";
@@ -92,8 +87,6 @@
 		61AFD23E22ADEE120091983C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				61584FC8229E1EF000CDCE6C /* Main.storyboard */,
-				61FE7C2422B5649700AC1229 /* CategoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -101,9 +94,6 @@
 		61AFD23F22ADEE4B0091983C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				61584FD622A00E3100CDCE6C /* StockDataModel.swift */,
-				61AFD24322AF49860091983C /* NewsItem.swift */,
-				61FE7C2022B5614300AC1229 /* DataSet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,9 +101,7 @@
 		61AFD24022ADEE560091983C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				61584FC6229E1EF000CDCE6C /* TeslaMoodViewController.swift */,
-				61AFD24122AE669D0091983C /* TeslaOpenViewController.swift */,
-				61584FC4229E1EF000CDCE6C /* AppDelegate.swift */,
+				61D2D37022BFF6CB00313529 /* BaseTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,13 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61FE7C2122B5614300AC1229 /* DataSet.swift in Sources */,
-				61AFD24422AF49860091983C /* NewsItem.swift in Sources */,
-				61584FC7229E1EF000CDCE6C /* TeslaMoodViewController.swift in Sources */,
-				61FE7C2522B5649700AC1229 /* CategoryCell.swift in Sources */,
+				61D2D36F22BFF68800313529 /* ViewController.swift in Sources */,
 				61584FC5229E1EF000CDCE6C /* AppDelegate.swift in Sources */,
-				61AFD24222AE669D0091983C /* TeslaOpenViewController.swift in Sources */,
-				61584FD722A00E3100CDCE6C /* StockDataModel.swift in Sources */,
+				61D2D37122BFF6CB00313529 /* BaseTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
